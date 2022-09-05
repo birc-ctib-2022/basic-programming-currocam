@@ -17,5 +17,5 @@ for c in password:
     if (not it_has_number) and (c in ["$", "#", "@"]):
         it_has_number = True
 
-is_valid = all(it_has_lower, it_has_upper, it_has_number, it_has_special_char)
+is_valid = all([it_has_lower, it_has_upper, it_has_number, it_has_special_char])
 print(is_valid)
