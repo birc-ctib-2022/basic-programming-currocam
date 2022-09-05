@@ -34,7 +34,7 @@ def print_list(x):
 # exercise, if it is "times", it is the second exercise, and if it is
 # "even" it is the third. Any other option is an error.
 
-def calculate_sum(numbers: list) -> float:
+def calculate_sum(numbers: list) -> int:
     sum = 0
     for i in numbers:
         sum += i
