@@ -34,6 +34,15 @@ def print_list(x):
 # exercise, if it is "times", it is the second exercise, and if it is
 # "even" it is the third. Any other option is an error.
 
+def calculate_sum(numbers: list) -> int:
+    sum = 0
+    for i in numbers:
+        sum += i
+    return sum
+
+
+def calculate_mean(numbers: list) -> float:
+    return calculate_sum(numbers)/len(numbers)
 
 if len(sys.argv) < 2:
     print("Incorrect number of arguments.", file=sys.stderr)
@@ -42,17 +51,17 @@ if len(sys.argv) < 2:
 match sys.argv[1]:
     case "mean":
         # put your solution to the first exercise here
-        mean = "mean of x"
+        mean = calculate_mean(x)
         print(mean)
 
     case "times":
         # Put your solution to the second exercise here
-        times_three = []
+        times_three = [i * 3 for i in x]
         print_list(times_three)
 
     case "even":
         # Put your solution to the third exercise here
-        even = []
+        even = [i for i in x if i % 2 == 0]
         print_list(even)
 
     case _:
